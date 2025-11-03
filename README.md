@@ -20,9 +20,6 @@ If you've ever felt overwhelmed by endless "waifu" content, furry art, or any ot
 📈 **Pattern analysis** - Export to JSON and analyze what tags appear most frequently
 ⚡ **Quick results** - Build effective filters in 10-15 minutes of collecting
 
-![Extension Demo](images/extension-demo.png)
-*The "Collect Data" button appears on every Civitai image page*
-
 ## Features
 
 - 🎯 **One-Click Collection**: Floating "Collect Data" button on Civitai image pages
@@ -35,7 +32,14 @@ If you've ever felt overwhelmed by endless "waifu" content, furry art, or any ot
 - 📊 **Real-time Counter**: See how many images you've collected
 
 ![Popup Interface](images/popup.png)
-*Simple interface: toggle collection, download data, or clear it*
+
+_Simple interface: toggle collection, download data, or clear it_
+
+<br><br>
+
+![Extension Demo](images/extension-demo.png)
+
+_The "Collect Data" button appears on every Civitai image page_
 
 ## Real Results
 
@@ -50,6 +54,7 @@ After analyzing 82 "waifu" images, we found that filtering just **2 tags** (`sex
 Choose one of these methods:
 
 **Option A: Download ZIP (Easiest)**
+
 1. Click the green **Code** button at the top of this page
 2. Select **Download ZIP**
 3. Extract the ZIP file to a permanent location on your computer
@@ -58,6 +63,7 @@ Choose one of these methods:
    - Bad locations: Downloads folder, Desktop (easy to accidentally delete)
 
 **Option B: Git Clone (For developers)**
+
 ```bash
 git clone https://github.com/LaughterOnWater/civitai-tag-collector.git
 cd civitai-tag-collector
@@ -91,15 +97,18 @@ cd civitai-tag-collector
 ### Troubleshooting Installation
 
 **"Developer mode extensions" warning banner**
+
 - This is normal for unpacked extensions and can be safely ignored
 - The extension is open-source - you can inspect all the code in this repository
 
 **Button not appearing on Civitai**
+
 - Make sure you're on an image detail page (`/images/*`), not the gallery or browse pages
 - Refresh the page after installing the extension
 - Check that the extension is enabled in `chrome://extensions/`
 
 **Extension disappeared after restart**
+
 - The folder was deleted or moved - reinstall from a permanent location
 - Developer mode was disabled - re-enable it
 
@@ -139,12 +148,7 @@ After collecting data, open the JSON file to analyze patterns:
         "version": "v14.0"
       }
     ],
-    "tags": [
-      "anime",
-      "character",
-      "solo",
-      "looking at viewer"
-    ],
+    "tags": ["anime", "character", "solo", "looking at viewer"],
     "collectedAt": "2025-11-02T21:30:00.000Z"
   }
 ]
@@ -159,26 +163,32 @@ Based on analysis of collected data, here are surgical filtering strategies for 
 Start with high-precision tags that specifically target sexualized anime characters:
 
 **Tier 1: High Precision**
+
 - `sexy attire`
 - `cleavage`
 
 **Tier 2: Medium Precision** (add if needed)
+
 - `large breasts`
 - `huge breasts`
 
 **Tier 3: Lower Precision** (more aggressive)
+
 - `blush`
 - `looking at viewer`
 
 ### Other Common Filters
 
 **Furry/Anthro Content:**
+
 - `furry`, `anthro`, `pony`, `furry female`
 
 **Mature Content:**
+
 - `hentai`, `futa`
 
 **Disturbing Content:**
+
 - `gore`, `body horror`
 
 ### Tag Analysis Tips
@@ -205,13 +215,13 @@ print(tag_counts.most_common(20))
 
 Each collected entry contains:
 
-| Field | Type | Description |
-|-------|------|-------------|
-| `imageId` | string | Civitai image ID extracted from URL |
-| `url` | string | Full URL to the image page |
-| `resourcesUsed` | array | Models/LoRAs with name, type, and version |
-| `tags` | array | Civitai auto-tagged categories |
-| `collectedAt` | string | ISO timestamp of collection |
+| Field           | Type   | Description                               |
+| --------------- | ------ | ----------------------------------------- |
+| `imageId`       | string | Civitai image ID extracted from URL       |
+| `url`           | string | Full URL to the image page                |
+| `resourcesUsed` | array  | Models/LoRAs with name, type, and version |
+| `tags`          | array  | Civitai auto-tagged categories            |
+| `collectedAt`   | string | ISO timestamp of collection               |
 
 ## Privacy & Storage
 
