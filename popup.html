@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Civitai Tag Collector</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 15px;
+        width: 250px;
+      }
+      h3 {
+        margin: 0 0 15px 0;
+      }
+      .status-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+      .count {
+        font-size: 14px;
+        color: #555;
+      }
+      .toggle-container {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 15px;
+      }
+      .toggle {
+        position: relative;
+        width: 44px;
+        height: 24px;
+        background-color: #ccc;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      .toggle.active {
+        background-color: #4CAF50;
+      }
+      .toggle-slider {
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        width: 20px;
+        height: 20px;
+        background-color: white;
+        border-radius: 50%;
+        transition: transform 0.3s;
+      }
+      .toggle.active .toggle-slider {
+        transform: translateX(20px);
+      }
+      .toggle-label {
+        font-size: 14px;
+        font-weight: bold;
+      }
+      button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 8px;
+        border: none;
+        border-radius: 4px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+      }
+      #download {
+        background-color: #2196F3;
+        color: white;
+      }
+      #download:hover {
+        background-color: #1976D2;
+      }
+      #clear {
+        background-color: #f44336;
+        color: white;
+      }
+      #clear:hover {
+        background-color: #d32f2f;
+      }
+      #clear:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+      }
+      .message {
+        margin-top: 12px;
+        padding: 8px;
+        border-radius: 4px;
+        font-size: 12px;
+        text-align: center;
+        display: none;
+      }
+      .message.success {
+        background-color: #d4edda;
+        color: #155724;
+      }
+      .message.error {
+        background-color: #f8d7da;
+        color: #721c24;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Prompt Collector</h3>
+
+    <div class="status-row">
+      <span class="count">Images collected: <strong id="count">0</strong></span>
+    </div>
+
+    <div class="toggle-container">
+      <div id="toggle" class="toggle active">
+        <div class="toggle-slider"></div>
+      </div>
+      <span class="toggle-label" id="toggle-label">Enabled</span>
+    </div>
+
+    <button id="download">Download JSON</button>
+    <button id="clear">Clear All Data</button>
+
+    <div id="message" class="message"></div>
+
+    <a
+      href="https://shop.low.li/downloads/help-the-legend-sail-on/"
+      target="_blank"
+      id="donate"
+      style="
+        display: block;
+        margin-top: 12px;
+        padding: 6px 12px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 4px;
+        font-size: 12px;
+        font-weight: 600;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      "
+      onmouseover="this.style.transform='translateY(-1px)'; this.style.boxShadow='0 4px 8px rgba(102, 126, 234, 0.4)'"
+      onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'"
+    >
+      💝 Support This Project
+    </a>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

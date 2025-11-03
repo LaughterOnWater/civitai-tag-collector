@@ -1,0 +1,47 @@
+[
+  {
+    "imageId": "12345678",
+    "url": "https://civitai.com/images/12345678",
+    "resourcesUsed": [
+      {
+        "name": "WAI-illustrious-SDXL",
+        "type": "Checkpoint",
+        "version": "v14.0"
+      },
+      {
+        "name": "Peach Momoko - ArtStyle",
+        "type": "LoRA",
+        "version": "IL V1"
+      }
+    ],
+    "tags": [
+      "character",
+      "anime",
+      "solo",
+      "outdoors",
+      "standing",
+      "day"
+    ],
+    "collectedAt": "2025-11-02T21:30:00.000Z"
+  },
+  {
+    "imageId": "87654321",
+    "url": "https://civitai.com/images/87654321",
+    "resourcesUsed": [
+      {
+        "name": "Counterfeit-V3.0",
+        "type": "Checkpoint",
+        "version": "v3.0"
+      }
+    ],
+    "tags": [
+      "landscape",
+      "scenery",
+      "outdoors",
+      "sky",
+      "clouds",
+      "nature"
+    ],
+    "collectedAt": "2025-11-02T21:32:15.000Z"
+  }
+]

@@ -1,0 +1,38 @@
+# Collected data exports
+*.json
+!example_output.json
+
+# Example HTML files (too large)
+*.html
+!popup.html
+
+# Allow screenshots in images folder
+!images/*.png
+!images/*.jpg
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Browser extension build artifacts
+*.crx
+*.pem
+*.zip
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Claude
+CLAUDE.md
